@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id1">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta 
+        name="description"
+        content="Formulit prototipe untuk mendaftarkan usaha sebagai penyedia makanan 
+        di SisaBaik."
+        >
+        <title>Daftar Penyedia | SisaBaik</title>
+    </head>
+
+    <body>
+        <a href="#konten-utama">Lewati ke konten utama</a>
+
+        <header>
+            <p> <strong>SisaBaik</strong></p>
+            <nav aria-label="Navigasi Utama">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li>
+                        <a href="daftar-penyedia.html" aria-current="page">
+                            Daftar sebagai penyedia
+                        </a>
+                    </li>
+                    <li><a href="tawarkan-makanan.html">Tawarkan Makanan</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="konten-utama" tabindex="-1">
+            <h1>Daftar Penyedia SisaBaik</h1>
+            <p>Gunakan data fiktif selama praktikum. Formulir ini belum
+                terhubung ke server dan basis data.
+            </p>
+            
+            <p id="petunjuk-wajib">Kolom beranda <strong>*</strong>
+               wajib diisi 
+            </p>
+
+            <form
+            action="daftar-penyedia.html11"
+            method="get"
+            aria-describedby="petunjuk wajib"
+            >
+            <fieldset>
+                <legen>Informasi usaha</legen>
+
+                <p>
+                    <label for="nama-usaha">Nama usaha <strong>*</strong></label>
+                    <input
+                    type="text"
+                    id="nama-usaha"
+                    name="nama-usaha"
+                    autocomplete="organization"
+                    minilength="3"
+                    maxlength="100"
+                    required
+                    >
+                </p>
+
+                <p>
+                    <label for="jenis-usaha">Jenis usaha *</label><br>
+                    <select id="jenis-usaha" name="jenis_usaha" required>
+                        <option value="">Pilih jenis usaha</option>
+                        <option value="restoran">Restoran</option>
+                        <option value="toko-roti">Toko Roti</option>
+                        <option value="katering">Katering</option>
+                        <option value="warung">Warung</option>
+                        <option valur="hotel">Hotel</option>
+                        <option valur="lainnya">Lainnya</option>
+                    </select>    
+                </p>
+
+                <p>
+                    <label for="deskripsi-usaha">Deskripsi singkatusaha</label><br>
+                    <textarea
+                    id="deskripsi-usaha"
+                    name="deskripsi_usaha"
+                    rows="5"
+                    maxlength="500"
+                    aria-describedby="bantuan-deskripsi"
+                    ></textarea><br>
+                    <small id="bantuan-deskripsi">
+                        Jelaskan jenis produk dan jam operasional, maksimal 500 karakter.
+                    </small>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Penganggung jawab</legend>
+                <p>
+                    <label for="nama-penanggung-jawab"
+                    name="nama_penanggung_jawab"
+                    autocomplete="name"
+                    minlength="3"
+                    maxlength="100"
+                    required
+                    ></label>
+                </p>
+
+                <p>
+                    <laber for="email">Alamat email *</laber><br>
+                    <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    aria-describedby="bantuan-email"
+                    required
+                    ><br>
+                    <small id="bantuan-email">Contoh: nama@usahaexample </small>           
+                </p>
+
+                <p>
+                    
+                </p>
+            </fieldset>
+
+
+        
+        </main>
+    </body>
+</html>
