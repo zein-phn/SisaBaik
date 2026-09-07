@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id1">
+<html lang="id">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
         content="Formulit prototipe untuk mendaftarkan usaha sebagai penyedia makanan 
         di SisaBaik."
         >
-        <title>Daftar Penyedia | SisaBaik</title>
+        <title> Daftar Penyedia | SisaBaik</title>
     </head>
 
     <body>
@@ -30,7 +30,7 @@
         </header>
 
         <main id="konten-utama" tabindex="-1">
-            <h1>Daftar Penyedia SisaBaik</h1>
+            <h1> Daftar Penyedia SisaBaik</h1>
             <p>Gunakan data fiktif selama praktikum. Formulir ini belum
                 terhubung ke server dan basis data.
             </p>
@@ -40,12 +40,12 @@
             </p>
 
             <form
-            action="daftar-penyedia.html11"
+            action="daftar-penyedia.html"
             method="get"
             aria-describedby="petunjuk wajib"
             >
             <fieldset>
-                <legen>Informasi usaha</legen>
+                <legend>Informasi usaha</legend>
 
                 <p>
                     <label for="nama-usaha">Nama usaha <strong>*</strong></label>
@@ -54,7 +54,7 @@
                     id="nama-usaha"
                     name="nama-usaha"
                     autocomplete="organization"
-                    minilength="3"
+                    minlength="3"
                     maxlength="100"
                     required
                     >
@@ -68,8 +68,8 @@
                         <option value="toko-roti">Toko Roti</option>
                         <option value="katering">Katering</option>
                         <option value="warung">Warung</option>
-                        <option valur="hotel">Hotel</option>
-                        <option valur="lainnya">Lainnya</option>
+                        <option value="hotel">Hotel</option>
+                        <option value="lainnya">Lainnya</option>
                     </select>    
                 </p>
 
@@ -91,17 +91,19 @@
             <fieldset>
                 <legend>Penganggung jawab</legend>
                 <p>
-                    <label for="nama-penanggung-jawab"
+                    <label for="nama-penanggung-jawab">Nama Penanggunag Jawab</label>
+                    <input
+                    id="nama-penanggung-jawab"
                     name="nama_penanggung_jawab"
                     autocomplete="name"
                     minlength="3"
                     maxlength="100"
                     required
-                    ></label>
+                    >
                 </p>
 
                 <p>
-                    <laber for="email">Alamat email *</laber><br>
+                    <label for="email">Alamat email *</label><br>
                     <input
                     type="email"
                     id="email"
@@ -115,12 +117,90 @@
                 </p>
 
                 <p>
-                    
+                    <label for="telepon">Nomor telepon *</label><br>
+                    <input
+                    type="tel"
+                    id="telepon"
+                    name="telepon"
+                    autocomplete="tel"
+                    pattern="[0-9]{8,20}"
+                    aria-describedby="bantuan-telepon"
+                    required
+                    ><br>
+                    <small id="bantuan-telepon">
+                        Gunakan 8-20 karakter berupa angka, spasi, tanda +, atau tanda kurung.
+                    </small>
                 </p>
             </fieldset>
 
+            <fieldset>
+                <legend>Lokasi usaha</legend>
 
-        
+                <p>
+                    <label for="alamat">Alamat lengkap*</label><br>
+                    <textarea
+                    id="alamat"
+                    name="alamat"
+                    rows="4"
+                    autocomplete="street-address"
+                    minlength="10"
+                    maxlength="250"
+                    required
+                    ></textarea>
+                </p>
+
+                <p>
+                    <label for="kota">Kota/Kabupaten*</label><br>
+                    <input
+                    id="kota"
+                    name="kota"
+                    autocomplete="address-level2"
+                    minlength="3"
+                    maxlength="100"
+                    required
+                    ><br>
+                    <small id="bantuan-kode-pos">
+                        Gunakan 5 digit angka, misal 12345
+                    </small>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Persetujuan</legend>
+                <p>
+                    <input
+                    type="checkbox"
+                    id="persetujuan"
+                    name="persetujuan"
+                    value="setuju"
+                    required
+                    
+                    >
+                    <label for="persetujuan">
+                        Saya menyatakan bahwa informasi latihan ini tidak menggunakan data
+                        pribadi atau data usaha yang sebenarnya.*
+                    </label>           
+                </p>
+            </fieldset>
+
+            <p>
+                <button type="submit">Kirim pendaftaran latihan</button>
+                <button type="reset">Kosongkan formulir</button>
+            </p>
+            </form>
+
+            <section aria-labelledby="catatan-prototipe">
+                <h2 id="catatan-prototipe">Apa yang terjadi setelah tombol dikirim?</h2>
+                <p>
+                    Browser memeriksa atribut HTML terlebih dahulu. Jika semua input valid, halaman dimuat ulang
+                    dan pasangan nama-nilai terlihat pada alamat halaman. Data belum disimpan ke server.
+                </p>
+            </section>
         </main>
+
+        <footer>
+            <p>&copy; 2026 SisBaik - Proyek pembelajaran pengembangan web</p>
+            <p>@zein-phn</p>
+        </footer>
     </body>
 </html>

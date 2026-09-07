@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Formulir prototipe untuk mencatat makanan berlebih 
     yang akan ditawarkan oleh penyedia di SisaBaik.">
-    >
+
     <title>Tawarkan Makanan | SisaBaik</title>
 </head>
 <body>
-    <href="#konten-utama">Lewati ke konten utama</a>
+    <a href="#konten-utama">Lewati ke konten utama</a>
 
     <header>
         <p> <strong> SisaBaik</strong></p>
@@ -43,7 +43,7 @@
             <legend>Identitas Makanan</legend>
 
             <p>
-                <laber for="nama-makanan">Nama Nakanan <strong>*</strong></label>
+                <label for="nama-makanan">Nama Nakanan <strong>*</strong></label>
                 <input
                 type="text"
                 id="nama-makanan"
@@ -51,8 +51,7 @@
                 minlength="3"
                 maxlength="120"
                 required
-                >
-            </p>
+                ></p>
 
             <p>
                 <label for="deskripsi-makanan">Deskripsi makanan*</label><br>
@@ -71,10 +70,11 @@
                 </small>
             </p>
         </fieldset>
-                <legend>Jumlah dan skema pemulihan nilai</legend>
 
+        <fieldset>
+                <legend>Jumlah dan skema pemulihan nilai</legend>
                 <p>
-                    <laber for="jumalh">Jumalah tersedia*</laber><br>
+                    <label for="jumlah">Jumalah tersedia*</label><br>
                     <input
                     type="number"
                     id="jumlah"
@@ -109,6 +109,7 @@
                     required
                     >
                 </p>
+        </fieldset>
 
                 <fieldset>
                     <legend>Jenis penawaran*</legend>
@@ -120,9 +121,8 @@
                         value="diskon"
                         required
                         >
+                        <label for="jenis-diskon">Dijual dengan harga diskon</label>
                     </p>
-
-                    <label for="jenis-diskon">Dijual dengan harga diskon</label>
                     <p>
                         <input
                         type="radio"
@@ -130,6 +130,7 @@
                         name="jenis_penawaran"
                         value="donasi"            
                         >
+                        <label for="jenis-donasi">Disalurkan tanpa biaya</label>
                     </p>
                 </fieldset>
                 
@@ -165,10 +166,95 @@
                         required
                         ><br> 
                     </p>
+
+                    <p>
+                        <label for="petunjuk-penyimpanan">Petunjuk penyimpanan*</label><br>
+                        <textarea
+                        id="petunjuk-penyimpanan"
+                        rows="4"
+                        minlength="10"
+                        maxlength="300"
+                        required
+                        ></textarea>
+                    </p>
                 </fieldset>
 
+                <fieldset>
+                    <legend>Informasi alergen yang diketahui</legend><br>
+                    <p>
+                        <input 
+                        type="checkbox" 
+                        id="alergen-gluten" name="alergen" value="gluten">
+                        <label for="alergen-gluten">Gluten</label>
+                    </p>
+                    <p>    
+                        <input
+                        type="checkbox"
+                        id="alergen-susu" name="alergen" value="susu">
+                        <label for="alergen-susu">Susu</label>
+                    </p>
+                    <p>
+                        <input
+                        type="checkbox"
+                        id="alergen-telur" name="alergen" value="telur">
+                        <label for="alergen-telur">Telur</label>
+                    </p>
+                    <p>
+                        <input
+                        type="checkbox"
+                        id="alergen-kacang" name="alergen" value="kacang">
+                        <label for="alergen-kacang">Kacang</label>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <label for="lokasi-pengambilan">Lokasi pengambilan*</label><br>
+                    <textarea
+                    id="lokasi-pengambilan" name="lokasi_pengambilna"
+                    rows="4"
+                    autocomplete="street-address"
+                    minlength="10"
+                    maxlength="250"
+                    required
+                    ></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>konfirmasi keamanan pangan</legend>
+                    <p>
+                        <input
+                        type="checkbox"
+                        id="konfirmasi-keamanan" name="konfirmasi_keamanan"
+                        value="terkonfirmasi"
+                        required
+                        >
+                        <label for="konfirmasi-keamanan">
+                            Saya memastikan contoh makanan ini masih layak dikonsumsi dan infomasi
+                            kondisi serta alergennya telah ditulis dengan jujur.
+                        </label>
+                    </p>
+                 </fieldset>
+                  
+                    <p>
+                        <button type="submit">Kirim penawaran latihan</button>
+                        <button type="reset">Kosongkan formulir</button>
+                    </p>
         </form>
-    </main>
-    
+        <section aria-labelledby="batas-validasi-html">
+        <h2 id="batas-validasi-html"> Batas validasi tahap HTML </h2>
+
+        <p>
+            Atribut HTML dapat memeriksan isian wajib, format dasar, dan rentang angka.
+            Namun, HTML belum dapat memastkan harga penawaran lebih kecil daripada harga normal
+            atau batas pengmbilan beranda di masa depan.
+            aturan lintas-kolom tersebut akan ditambahkan dengan JavaScript dan tetap diperiksa ulang pada server
+        </p>
+        </section>
+    </main>  
+    <footer>
+        <p>&copy; 2026 SisaBaik - Proyek pembelajaran pengembangan Web.</p>
+        <p>@Zein_phn
+        </p>
+    </footer>
 </body>
 </html>
